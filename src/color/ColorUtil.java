@@ -11,12 +11,8 @@ public class ColorUtil {
     private final static double Umax = 0.436;
     private final static double Vmax = 0.615;
 
-    public static double[] RGBtoYUV (int r, int g, int b) {
+    public static double[] RGBtoYUV (double R, double G, double B) {
 
-        // Turning into [0,1] range
-        double R = r/255;
-        double G = g/255;
-        double B = b/255;
 
         double Y = (Wr*R) + (Wg*G) + (Wb*B);
         double U = Umax * ((B - Y)/(1 - Wb));
@@ -32,7 +28,7 @@ public class ColorUtil {
         double G = y - u * ((Wb * (1-Wb))/(Umax * Wg)) - v * ((Wr * (1-Wr))/(Vmax*Wg));
         double B = y + u * ((1 - Wb)/Umax);
 
-        return new double[] {R*255, G*255, B*255};
+        return new double[] {R, G, B};
 
     }
 
@@ -44,6 +40,12 @@ public class ColorUtil {
 
     }
 
+    public static double[] getEndPoint (double uX, double vX, double u3, double v3 ) {
 
+        double uY = (2 * u3) - uX;
+        double vY = (2 * v3) - vX;
+        return new double[] {uY, vY};
+
+    }
 
 }
