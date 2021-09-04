@@ -40,6 +40,7 @@ public class ColorUtil {
 
     }
 
+
     public static double[] getEndPoint (double uX, double vX, double u3, double v3 ) {
 
         double uY = (2 * u3) - uX;

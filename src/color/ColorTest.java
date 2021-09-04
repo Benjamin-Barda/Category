@@ -6,6 +6,7 @@ public class ColorTest {
 
         Colors c = new Colors();
         c.createCatForImage(20,3);
-        System.out.println(c);
+        c.printDEBUG();
+        c.saveToFile("prova");
     }
 }

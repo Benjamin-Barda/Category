@@ -12,8 +12,6 @@ public class Color {
                 g < 0 || g > 1 ||
                 b < 0 || b > 1
         ) throw new InvalidColorException() {};
-
-
         this.r = r;
         this.g = g;
         this.b = b;
@@ -44,5 +42,9 @@ public class Color {
 
     public String toString (){
         return " R: " + r + " G: " + g + " B: " + b +"\nY: " + YUV[0] + " U: " + YUV[1] + " V: " + YUV[2] + "\n\n";
+    }
+
+    public String getStringForImage() {
+        return "[" + r + "," + g + "," + b + "," + YUV[0] + "," + YUV[1] + "," + YUV[2] + "]";
     }
 }
