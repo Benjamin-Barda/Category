@@ -1,7 +1,5 @@
 package color;
 
-import categoryBase.Category;
-
 class ImageFileGenerator {
 
 
@@ -17,6 +15,6 @@ public static void main(String[] args) throws InvalidColorException {
     int numberOfConnections = 10;  
 
     category.createCatForImage(numberOfObjects, numberOfConnections);
-    category.saveToFile("colorCategory.txt");
+    category.saveToFile("colorCategory");
     }
 }
