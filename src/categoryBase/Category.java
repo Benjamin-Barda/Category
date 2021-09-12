@@ -1,4 +1,7 @@
 package categoryBase;
+
+import color.Color;
+
 /**
  * Consists of a collection of <b>objects</b> and for each pair of objects A,B a set of <b>morphisms</b> hom(A,B) between them such
  * that:
@@ -70,10 +73,13 @@ public interface Category<O> {
      * @return a morphism with starting point in the source of the first morphism and ending point in the target of the second
      * @throws IllegalCompositionException If the source of the second morphism doesn't coincide with the target of the first
      */
-    Morphism<? extends Object<O>, ? extends Object<O>> compose
+     Morphism<? extends Object<O>, ? extends Object<O>> compose
             ( Morphism<? extends Object<O>, ? extends Object<O>> f,
               Morphism<? extends Object<O>, ? extends Object<O>> g)
-            throws IllegalCompositionException;
+            throws IllegalCompositionException; 
+    
+
+
+            
 
 }
-

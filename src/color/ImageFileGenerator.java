@@ -4,12 +4,15 @@ import categoryBase.Category;
 
 class ImageFileGenerator {
 
+
+/** 
+ * @param args
+ * @throws InvalidColorException
+ */
 public static void main(String[] args) throws InvalidColorException {
 
     Colors category = new Colors();
-
-    // DO not Run on laptoP !!!!!!!!
-
+    
     int numberOfObjects = 40000; 
     int numberOfConnections = 100;  
 

@@ -26,14 +26,23 @@ public class Colors implements Category<Color> {
      * @return a morphism with starting point in the source of the first morphism and ending point in the target of the second
      * @throws IllegalCompositionException If the source of the second morphism doesn't coincide with the target of the first
      */
-    // TODO: Need to clean and implement this method now it is not relevant
     @Override
-    public Morphism<? extends Object<Color>, ? extends Object<Color>> compose
-            (Morphism<? extends Object<Color>, ? extends Object<Color>> f,
-             Morphism<? extends Object<Color>, ? extends Object<Color>> g)
-            throws IllegalCompositionException {
-        return null;
+    public Morphism<? extends Object<Color>, ? extends Object<Color>> compose(
+            Morphism<? extends Object<Color>, ? extends Object<Color>> f,
+            Morphism<? extends Object<Color>, ? extends Object<Color>> g) throws IllegalCompositionException {
+        // TODO Auto-generated method stub
+        //return null;
+        try {
+            Morph m = new Morph((Obj)f.getSource(), (Obj)g.getTarget());
+            return m;
+        } catch(InvalidColorException e) {
+            e.printStackTrace();
+            return null;
+        }
+
     }
+
+
 
     /**
      * Implementation of interface {@link Category}'s generic interface {@link Object}.&nbsp;
@@ -114,9 +123,9 @@ public class Colors implements Category<Color> {
      */
     public class Morph implements Morphism<Obj,Obj> {
 
-        Obj source, target;
-        int sourceID, targetID;
-        Color missing;
+        private Obj source, target;
+        private int sourceID, targetID;
+        private Color missing;
 
         /**
          *Class constructor. Takes as parameters two objects of type {@link Obj} and
@@ -314,5 +323,7 @@ public class Colors implements Category<Color> {
             e.printStackTrace();
         }
     }
+
+
 
 }
