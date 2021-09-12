@@ -30,8 +30,6 @@ public class Colors implements Category<Color> {
     public Morphism<? extends Object<Color>, ? extends Object<Color>> compose(
             Morphism<? extends Object<Color>, ? extends Object<Color>> f,
             Morphism<? extends Object<Color>, ? extends Object<Color>> g) throws IllegalCompositionException {
-        // TODO Auto-generated method stub
-        //return null;
         try {
             Morph m = new Morph((Obj)f.getSource(), (Obj)g.getTarget());
             return m;
