@@ -184,7 +184,7 @@ public class Colors implements Category<Color> {
          */
         @Override
         public String getId() {
-            return source.id + ","  + target.id + missing.getStringForImage();
+            return source.id + " "  + target.id + " " + missing.getStringForImage();
         }
 
         /**
@@ -312,7 +312,7 @@ public class Colors implements Category<Color> {
             //System.out.println("Finished Nodes");
 
             for (Morph m : morphArray) {
-                writer.write("M:"+ m.getStringForImage() + "\n");
+                writer.write("M "+ m.getStringForImage() + "\n");
             }
 
             writer.close();

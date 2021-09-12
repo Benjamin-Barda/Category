@@ -78,8 +78,4 @@ public interface Category<O> {
               Morphism<? extends Object<O>, ? extends Object<O>> g)
             throws IllegalCompositionException; 
     
-
-
-            
-
 }

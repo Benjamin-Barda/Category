@@ -13,8 +13,8 @@ public static void main(String[] args) throws InvalidColorException {
 
     Colors category = new Colors();
     
-    int numberOfObjects = 40000; 
-    int numberOfConnections = 100;  
+    int numberOfObjects = 40; 
+    int numberOfConnections = 10;  
 
     category.createCatForImage(numberOfObjects, numberOfConnections);
     category.saveToFile("colorCategory.txt");

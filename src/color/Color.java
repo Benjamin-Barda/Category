@@ -89,6 +89,6 @@ public class Color {
      * @return a string displaying each value of the RGB and YUV triple one by one.
      */
     public String getStringForImage() {
-        return "[" + r + "," + g + "," + b + "," + YUV[0] + "," + YUV[1] + "," + YUV[2] + "]";
+        return "[" + r + "," + g + "," + b + "]";
     }
 }
