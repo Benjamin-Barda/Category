@@ -304,7 +304,7 @@ public class Colors implements Category<Color> {
      */
     public void saveToFile (String path) {
         try{
-            FileWriter writer = new FileWriter("prova.txt");
+            FileWriter writer = new FileWriter(path+".txt");
             for (Obj obj : objectArray) {
                 writer.write(obj.getStringForImage() + "\n");
             }
