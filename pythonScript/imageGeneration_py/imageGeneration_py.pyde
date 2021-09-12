@@ -30,12 +30,6 @@ def setup():
     save(imageName)
     print("FINISHED")
             
-        
-
-            
-    
-    
-
 
 
 class Node: 
