@@ -80,7 +80,7 @@ public class Color {
      * @return a string displaying each value of the RGB and YUV triple one by one.
      */
     public String toString (){
-        return " R: " + r + " G: " + g + " B: " + b +"\nY: " + YUV[0] + " U: " + YUV[1] + " V: " + YUV[2] + "\n\n";
+        return " R: " + r + " G: " + g + " B: " + b +" Y: " + YUV[0] + " U: " + YUV[1] + " V: " + YUV[2] + "\n";
     }
 
     /**

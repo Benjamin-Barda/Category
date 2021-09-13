@@ -27,11 +27,12 @@ public class Colors implements Category<Color> {
      * @throws IllegalCompositionException If the source of the second morphism doesn't coincide with the target of the first
      */
     @Override
-    public Morphism<? extends Object<Color>, ? extends Object<Color>> compose(
+    public Morph compose(
             Morphism<? extends Object<Color>, ? extends Object<Color>> f,
             Morphism<? extends Object<Color>, ? extends Object<Color>> g) throws IllegalCompositionException {
         try {
             Morph m = new Morph((Obj)f.getSource(), (Obj)g.getTarget());
+            System.out.println("1");
             return m;
         } catch(InvalidColorException e) {
             e.printStackTrace();
@@ -193,7 +194,7 @@ public class Colors implements Category<Color> {
          * @return a string displaying each value of the RGB and YUV triple of the source's and target's field color and average color one by one.
          */
         public String toString() {
-            return " source: " + source.toString() + "target: " + target.toString() + "\n ---" + missing.toString();
+            return " source: " + source.getId() + "  target: " + target.getId() + "  MISSING: " + missing.toString();
         }
 
         /**
@@ -275,7 +276,7 @@ public class Colors implements Category<Color> {
      * and of each source and target object of each morphism of Color's field morphList one by one.
      */
     public String toString () {
-        return objectList.toString() + morphList.toString();
+        return "\nOBJECTS\n" + objectList.toString() + "\nMORPHISM\n" +  morphList.toString();
     }
 
     /**
@@ -304,7 +305,7 @@ public class Colors implements Category<Color> {
      */
     public void saveToFile (String path) {
         try{
-            FileWriter writer = new FileWriter("prova.txt");
+            FileWriter writer = new FileWriter(path + ".txt");
             for (Obj obj : objectArray) {
                 writer.write(obj.getStringForImage() + "\n");
             }
