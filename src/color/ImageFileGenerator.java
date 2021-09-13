@@ -11,7 +11,7 @@ public static void main(String[] args) throws InvalidColorException {
 
     Colors category = new Colors();
     
-    int numberOfObjects = 40; 
+    int numberOfObjects = 2000; 
     int numberOfConnections = 10;  
 
     category.createCatForImage(numberOfObjects, numberOfConnections);
